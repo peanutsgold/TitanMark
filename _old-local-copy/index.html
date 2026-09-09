@@ -1,0 +1,832 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#05070d">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Titanmark">
+    <title>Titanmark | Web Design &amp; Graphic Design</title>
+    <meta
+      name="description"
+      content="Titanmark builds logos, graphic design, responsive websites, portfolio sections, and launch-ready digital experiences."
+    >
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+    <link rel="manifest" href="manifest.webmanifest">
+    <link rel="stylesheet" href="styles.css?v=20260725-2">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Titanmark home">
+        <img src="assets/titanmark-logo-dark.png" alt="Titanmark logo">
+      </a>
+
+      <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="site-nav">
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+        <a href="#services">Services</a>
+        <a href="#price-guide">Prices</a>
+        <a href="#pay-online">Get a quote</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#contact">Contact</a>
+        <button class="install-app-link" id="install-app" type="button">Install app</button>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-inner">
+          <div class="hero-copy">
+            <img class="hero-brandmark" src="assets/titanmark-logo-dark.png" alt="Titanmark">
+            <p class="eyebrow">Design above. <span>Strategy below.</span></p>
+            <h1 id="hero-title">Sharp design.<br><span>Deeper strategy.</span></h1>
+            <p class="hero-lede">
+              Websites that look sharp, load cleanly, and carry the deeper systems:
+              clear messaging, conversion paths, reliable performance, launch support, and trust.
+            </p>
+
+            <div class="hero-services" aria-label="Titanmark services">
+              <span>Web design</span>
+              <span>Branding</span>
+              <span>Graphic design</span>
+              <span>Launch support</span>
+            </div>
+
+            <div class="hero-actions" aria-label="Primary actions">
+              <a class="button primary" href="#contact">Request a quote</a>
+              <a class="button secondary" href="#portfolio">See the work</a>
+            </div>
+
+            <div class="hero-points" aria-label="Titanmark build layers">
+              <article>
+                <strong>Visible</strong>
+                <span>Brand, layout, motion</span>
+              </article>
+              <article>
+                <strong>Below</strong>
+                <span>Copy, clarity, conversion</span>
+              </article>
+              <article>
+                <strong>Launch</strong>
+                <span>Support, updates, growth</span>
+              </article>
+            </div>
+          </div>
+
+          <aside class="depth-board" aria-label="What Titanmark builds under the surface">
+            <p class="board-title">Titanmark build stack</p>
+            <ul>
+              <li>Visual design</li>
+              <li>Responsive layout</li>
+              <li>Conversion flow</li>
+              <li>Portfolio proof</li>
+              <li>Launch support</li>
+            </ul>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section" id="services" aria-labelledby="services-title">
+        <div class="section-inner">
+          <div class="section-heading">
+            <p class="eyebrow">Services</p>
+            <h2 id="services-title"><button class="services-heading-open service-builder-open" type="button">Design, websites, branding, and launch support.</button></h2>
+            <p>Choose the work you need, select the size or number of pages, and request a deposit invoice.</p>
+            <button class="button primary service-builder-open" type="button">Choose your service</button>
+          </div>
+
+          <div class="service-grid">
+            <article class="service-card">
+              <span class="service-mark">01</span>
+              <h3>Logo and brand design</h3>
+              <p>Basic logos, premium concepts, revisions, and brand visuals that make the business feel credible quickly.</p>
+              <button class="text-action service-builder-open" type="button" data-builder-service="Branding">Choose an option</button>
+            </article>
+            <article class="service-card">
+              <span class="service-mark">02</span>
+              <h3>Print design</h3>
+              <p>Business cards, flyers, pull-up banners, and tri-fold brochures prepared with clean layouts and strong hierarchy.</p>
+              <button class="text-action service-builder-open" type="button" data-builder-service="Print design">Choose an option</button>
+            </article>
+            <article class="service-card">
+              <span class="service-mark">03</span>
+              <h3>Social media assets</h3>
+              <p>Social media posts and Facebook cover banners that keep the brand consistent across the places clients see first.</p>
+              <button class="text-action service-builder-open" type="button" data-builder-service="Social media design">Choose an option</button>
+            </article>
+            <article class="service-card">
+              <span class="service-mark">04</span>
+              <h3>Website design</h3>
+              <p>One-page websites, business websites, and custom builds with responsive sections and portfolio proof.</p>
+              <button class="text-action service-builder-open" type="button" data-builder-service="Website design">Choose pages &amp; price</button>
+            </article>
+            <article class="service-card">
+              <span class="service-mark">05</span>
+              <h3>Pay online setup</h3>
+              <p>Payment-ready layouts for deposits, project invoices, monthly care plans, secure checkout, and client proof.</p>
+              <button class="text-action service-builder-open" type="button" data-builder-service="Online payment setup">Choose an option</button>
+            </article>
+            <article class="service-card">
+              <span class="service-mark">06</span>
+              <h3>Maintenance</h3>
+              <p>Monthly updates, page edits, small fixes, and launch support so the site keeps working after it goes live.</p>
+              <button class="text-action service-builder-open" type="button" data-builder-service="Website maintenance">Choose an option</button>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-alt" id="price-guide" aria-labelledby="price-guide-title">
+        <div class="section-inner">
+          <div class="section-heading">
+            <p class="eyebrow">Price guide</p>
+            <h2 id="price-guide-title">What your project may cost.</h2>
+            <p>Final prices depend on the size, detail, and features required. Select a service and tell us what you need for an exact quote.</p>
+          </div>
+
+          <div class="cost-grid">
+            <details class="cost-card">
+              <summary>
+                <span class="cost-number">01</span>
+                <span class="cost-heading">
+                  <span class="cost-title">Logo Design</span>
+                  <span class="cost">From R850</span>
+                  <span class="cost-summary">A professional logo supplied in practical web and print formats.</span>
+                </span>
+                <span class="cost-open" aria-hidden="true">View options</span>
+              </summary>
+              <div class="cost-details">
+                <div class="package-option">
+                  <div><strong>Starter Logo</strong><span>R850</span></div>
+                  <p>1 concept, 1 refinement round, transparent PNG (2000 px), JPG and favicon.</p>
+                </div>
+                <div class="package-option">
+                  <div><strong>Professional Logo</strong><span>R1,800</span></div>
+                  <p>3 concepts, 2 refinement rounds, scalable SVG/PDF, PNG/JPG, black and white versions.</p>
+                </div>
+                <div class="package-option">
+                  <div><strong>Brand Identity</strong><span>From R3,500</span></div>
+                  <p>Professional logo package plus colour palette, typography, social profile image and mini brand guide.</p>
+                </div>
+                <p class="spec-note"><strong>Files included:</strong> high-resolution and transparent versions for websites, social media and professional printing.</p>
+                <button class="button secondary service-builder-open" type="button" data-builder-service="Branding">Choose a logo package</button>
+              </div>
+            </details>
+
+            <details class="cost-card featured-cost">
+              <summary>
+                <span class="cost-number">02</span>
+                <span class="cost-heading">
+                  <span class="cost-title">Website Design &amp; Development</span>
+                  <span class="cost">From R3,500</span>
+                  <span class="cost-summary">Choose the exact number of pages your business needs.</span>
+                </span>
+                <span class="cost-open" aria-hidden="true">View page prices</span>
+              </summary>
+              <div class="cost-details">
+                <div class="website-price-list" aria-label="Website prices by page count">
+                  <div><strong>1-page website</strong><span>R3,500</span></div>
+                  <div><strong>2-page website</strong><span>R4,500</span></div>
+                  <div><strong>3-page website</strong><span>R5,500</span></div>
+                  <div><strong>4-page website</strong><span>R6,000</span></div>
+                  <div><strong>5-page website</strong><span>R6,500</span></div>
+                  <div><strong>6-page website</strong><span>R7,500</span></div>
+                  <div><strong>7-page website</strong><span>R8,500</span></div>
+                  <div><strong>8+ pages or custom features</strong><span>From R10,000</span></div>
+                </div>
+                <p class="spec-note"><strong>Every website includes:</strong> responsive desktop and mobile design, contact section, basic SEO structure, launch setup and one refinement round. Hosting, domain fees and paid services are quoted separately.</p>
+                <button class="button secondary service-builder-open" type="button" data-builder-service="Website design">Choose pages &amp; price</button>
+              </div>
+            </details>
+
+            <details class="cost-card">
+              <summary>
+                <span class="cost-number">03</span>
+                <span class="cost-heading">
+                  <span class="cost-title">Business Card Design</span>
+                  <span class="cost">From R350</span>
+                  <span class="cost-summary">A dedicated print-ready card—not mixed with general web design.</span>
+                </span>
+                <span class="cost-open" aria-hidden="true">View sizes</span>
+              </summary>
+              <div class="cost-details">
+                <div class="package-option">
+                  <div><strong>Single-sided card</strong><span>R350</span></div>
+                  <p>One clean layout with your logo, name and contact details.</p>
+                </div>
+                <div class="package-option">
+                  <div><strong>Double-sided card</strong><span>R500</span></div>
+                  <p>Front and back design with space for services, QR code or a call to action.</p>
+                </div>
+                <p class="spec-note"><strong>Standard size:</strong> 90 × 50 mm, supplied at 300 DPI with 3 mm bleed, crop marks and a PDF ready for your printer. Printing costs are separate.</p>
+                <button class="button secondary service-builder-open" type="button" data-builder-service="Business cards">Choose a card</button>
+              </div>
+            </details>
+
+            <details class="cost-card">
+              <summary>
+                <span class="cost-number">04</span>
+                <span class="cost-heading">
+                  <span class="cost-title">Flyers, Brochures &amp; Banners</span>
+                  <span class="cost">From R450</span>
+                  <span class="cost-summary">Each print item has its own format, size and price.</span>
+                </span>
+                <span class="cost-open" aria-hidden="true">View print options</span>
+              </summary>
+              <div class="cost-details">
+                <div class="package-option"><div><strong>A5/A4 single-sided flyer</strong><span>R450</span></div><p>One promotional page for print and digital sharing.</p></div>
+                <div class="package-option"><div><strong>A5/A4 double-sided flyer</strong><span>R650</span></div><p>Front and back layout for more information.</p></div>
+                <div class="package-option"><div><strong>DL tri-fold brochure</strong><span>R900</span></div><p>Six organised panels supplied print-ready.</p></div>
+                <div class="package-option"><div><strong>Pull-up banner</strong><span>From R650</span></div><p>Artwork sized to your printer’s final banner specification.</p></div>
+                <p class="spec-note">Supplied as a high-resolution print PDF with bleed where required. Printing is quoted separately.</p>
+                <button class="button secondary service-builder-open" type="button" data-builder-service="Print design">Choose a print item</button>
+              </div>
+            </details>
+
+            <details class="cost-card">
+              <summary>
+                <span class="cost-number">05</span>
+                <span class="cost-heading">
+                  <span class="cost-title">Social Media Graphics</span>
+                  <span class="cost">From R250</span>
+                  <span class="cost-summary">Correctly sized branded graphics for the platform you use.</span>
+                </span>
+                <span class="cost-open" aria-hidden="true">View options</span>
+              </summary>
+              <div class="cost-details">
+                <div class="package-option"><div><strong>Single social post</strong><span>R250</span></div><p>1080 × 1080 px square graphic.</p></div>
+                <div class="package-option"><div><strong>Story graphic</strong><span>R250</span></div><p>1080 × 1920 px vertical graphic.</p></div>
+                <div class="package-option"><div><strong>Cover or profile banner</strong><span>From R350</span></div><p>Designed to the current platform dimensions and safe areas.</p></div>
+                <div class="package-option"><div><strong>5-post branded pack</strong><span>R750</span></div><p>A consistent set of campaign-ready graphics.</p></div>
+                <button class="button secondary service-builder-open" type="button" data-builder-service="Social media design">Choose social graphics</button>
+              </div>
+            </details>
+
+            <details class="cost-card">
+              <summary>
+                <span class="cost-number">06</span>
+                <span class="cost-heading">
+                  <span class="cost-title">Online Payment Setup</span>
+                  <span class="cost">R750 – R2,000</span>
+                  <span class="cost-summary">A secure payment or deposit flow connected to your website.</span>
+                </span>
+                <span class="cost-open" aria-hidden="true">View what’s included</span>
+              </summary>
+              <div class="cost-details">
+                <p class="spec-note">Setup may include PayFast or Yoco checkout, return and cancellation pages, payment notifications and testing. Provider approval, transaction fees and advanced shop features are separate.</p>
+                <button class="button secondary service-builder-open" type="button" data-builder-service="Online payment setup">Choose payment setup</button>
+              </div>
+            </details>
+
+            <details class="cost-card">
+              <summary>
+                <span class="cost-number">07</span>
+                <span class="cost-heading">
+                  <span class="cost-title">Website Maintenance</span>
+                  <span class="cost">From R350/month</span>
+                  <span class="cost-summary">Ongoing updates and care after your website launches.</span>
+                </span>
+                <span class="cost-open" aria-hidden="true">View care plans</span>
+              </summary>
+              <div class="cost-details">
+                <div class="package-option"><div><strong>Essential care</strong><span>R350/month</span></div><p>Basic checks and one small content update.</p></div>
+                <div class="package-option"><div><strong>Business care</strong><span>R750/month</span></div><p>Regular updates, backups and priority small fixes.</p></div>
+                <div class="package-option"><div><strong>Active website care</strong><span>R1,200/month</span></div><p>More frequent changes and support for important website features.</p></div>
+                <button class="button secondary service-builder-open" type="button" data-builder-service="Website maintenance">Choose a care plan</button>
+              </div>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-alt" id="pricing" aria-labelledby="pricing-title" hidden>
+        <div class="section-inner">
+          <div class="section-heading">
+            <p class="eyebrow">Request a quote</p>
+            <h2 id="pricing-title">Tell us what you need done and we’ll prepare the right quote.</h2>
+            <p>Choose a starting option below, or use the enquiry form to describe exactly what you need.</p>
+            <a class="button primary" href="#contact">Describe what you need</a>
+          </div>
+
+          <div class="pricing-grid" aria-label="Website packages">
+            <article class="price-card is-active" data-package="One-page Website" data-price="R 3,500">
+              <div>
+                <p class="package-label">Starting</p>
+                <h3>One-page Website</h3>
+                <p class="price">R 3,500</p>
+                <p class="price-note">A straightforward starting point for a new business.</p>
+              </div>
+              <ul>
+                <li>One-page website</li>
+                <li>Mobile responsive layout</li>
+                <li>Basic page setup</li>
+                <li>Contact section</li>
+              </ul>
+              <button class="select-package" type="button">Select One-page</button>
+            </article>
+
+            <article class="price-card featured" data-package="Business Website" data-price="R 6,500">
+              <div>
+                <p class="package-label">Popular</p>
+                <h3>Business Website</h3>
+                <p class="price">R 6,500</p>
+                <p class="price-note">Final price depends on the number of pages and content.</p>
+              </div>
+              <ul>
+                <li>5-7 page website</li>
+                <li>Services and pricing</li>
+                <li>Portfolio and testimonials</li>
+                <li>Pay online section</li>
+              </ul>
+              <button class="select-package" type="button">Select Business</button>
+            </article>
+
+            <article class="price-card" data-package="Custom Website" data-price="From R10,000">
+              <div>
+                <p class="package-label">Custom</p>
+                <h3>Custom Website</h3>
+                <p class="price">From R10,000</p>
+                <p class="price-note">Quoted around the exact functions your business needs.</p>
+              </div>
+              <ul>
+                <li>Custom page structure</li>
+                <li>Conversion copy support</li>
+                <li>Advanced content structure</li>
+                <li>Launch checklist</li>
+              </ul>
+              <button class="select-package" type="button">Select Custom</button>
+            </article>
+          </div>
+
+          <div class="pricing-table-wrap" aria-label="Full Titanmark service pricing">
+            <table class="pricing-table">
+              <caption>Full service price guide</caption>
+              <thead>
+                <tr>
+                  <th scope="col">Service</th>
+                  <th scope="col">Starting Price</th>
+                  <th scope="col">Professional Price</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="is-selected">
+                  <td>
+                    <button class="service-detail-trigger" type="button" data-service="basic-logo" data-price="R850">
+                      Basic Logo Design
+                    </button>
+                  </td>
+                  <td>R850</td>
+                  <td>R1,800</td>
+                </tr>
+                <tr class="service-detail-row" id="service-detail-row">
+                  <td class="service-detail-cell" colspan="3">
+                    <article class="service-detail-card" id="service-detail" aria-live="polite">
+                      <div>
+                        <p class="package-label">What is included</p>
+                        <h3 id="service-detail-title">Basic Logo Design</h3>
+                        <p id="service-detail-description">
+                          A simple, clean logo direction for a new business that needs to look credible quickly.
+                        </p>
+                      </div>
+                      <ul id="service-detail-list">
+                        <li>One main logo concept</li>
+                        <li>Basic typography and colour direction</li>
+                        <li>One round of small refinements</li>
+                        <li>Final web-ready logo export</li>
+                      </ul>
+                    </article>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <button class="service-detail-trigger" type="button" data-service="premium-logo" data-price="R1,800">
+                      Premium Logo (3 concepts + revisions)
+                    </button>
+                  </td>
+                  <td>R1,800</td>
+                  <td>R3,500</td>
+                </tr>
+                <tr>
+                  <td>
+                    <button class="service-detail-trigger" type="button" data-service="business-card" data-price="R350">
+                      Business Card Design
+                    </button>
+                  </td>
+                  <td>R350</td>
+                  <td>R650</td>
+                </tr>
+                <tr>
+                  <td>
+                    <button class="service-detail-trigger" type="button" data-service="single-flyer" data-price="R450">
+                      Flyer (Single-sided A5/A4)
+                    </button>
+                  </td>
+                  <td>R450</td>
+                  <td>R900</td>
+                </tr>
+                <tr>
+                  <td>
+                    <button class="service-detail-trigger" type="button" data-service="double-flyer" data-price="R650">
+                      Double-sided Flyer
+                    </button>
+                  </td>
+                  <td>R650</td>
+                  <td>R1,200</td>
+                </tr>
+                <tr>
+                  <td>
+                    <button class="service-detail-trigger" type="button" data-service="social-post" data-price="R250">
+                      Social Media Post
+                    </button>
+                  </td>
+                  <td>R250</td>
+                  <td>R500</td>
+                </tr>
+                <tr>
+                  <td>
+                    <button class="service-detail-trigger" type="button" data-service="facebook-cover" data-price="R350">
+                      Facebook Cover Banner
+                    </button>
+                  </td>
+                  <td>R350</td>
+                  <td>R750</td>
+                </tr>
+                <tr>
+                  <td>
+                    <button class="service-detail-trigger" type="button" data-service="pull-up-banner" data-price="R650">
+                      Pull-up Banner
+                    </button>
+                  </td>
+                  <td>R650</td>
+                  <td>R1,400</td>
+                </tr>
+                <tr>
+                  <td>
+                    <button class="service-detail-trigger" type="button" data-service="brochure" data-price="R900">
+                      Brochure (Tri-fold)
+                    </button>
+                  </td>
+                  <td>R900</td>
+                  <td>R1,800</td>
+                </tr>
+                <tr>
+                  <td>
+                    <button class="service-detail-trigger" type="button" data-service="one-page-website" data-price="R3,500">
+                      One-page Website
+                    </button>
+                  </td>
+                  <td>R3,500</td>
+                  <td>R5,500</td>
+                </tr>
+                <tr>
+                  <td>
+                    <button class="service-detail-trigger" type="button" data-service="business-website" data-price="R6,500">
+                      Business Website (5-7 pages)
+                    </button>
+                  </td>
+                  <td>R6,500</td>
+                  <td>R10,000</td>
+                </tr>
+                <tr>
+                  <td>
+                    <button class="service-detail-trigger" type="button" data-service="custom-website" data-price="From R10,000">
+                      Custom Website
+                    </button>
+                  </td>
+                  <td>From R10,000</td>
+                  <td>By quote</td>
+                </tr>
+                <tr>
+                  <td>
+                    <button class="service-detail-trigger" type="button" data-service="maintenance" data-price="R350-R1,200/month">
+                      Website Maintenance
+                    </button>
+                  </td>
+                  <td>R350-R1,200/month</td>
+                  <td>By plan</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section class="section banking-section" id="payments" aria-labelledby="payments-title">
+        <div class="section-inner banking-layout">
+          <div class="banking-copy">
+            <p class="eyebrow">Secure online payments</p>
+            <h2 id="payments-title">Your details here. Your banking stays with your bank.</h2>
+            <p>Choose a website package and enter your contact details. PayFast then opens its secure checkout, where you select your preferred payment method or supported bank and authorise the payment.</p>
+            <div class="banking-assurances" aria-label="Payment assurances">
+              <span>Secure PayFast checkout</span>
+              <span>Instant EFT and card options</span>
+              <span>No banking PINs stored here</span>
+            </div>
+            <ol class="payment-flow" aria-label="How online payment works">
+              <li><strong>Enter your details</strong><span>Select a fixed website package and provide your contact information.</span></li>
+              <li><strong>Choose your bank</strong><span>PayFast opens securely so you can choose an available bank or another payment method.</span></li>
+              <li><strong>Receive confirmation</strong><span>PayFast verifies the transaction and sends the result to Titanmark.</span></li>
+            </ol>
+            <p class="payment-safety-note">Never send your banking password, PIN, OTP, card number or CVV to Titanmark. Those details are entered only on PayFast or your bank’s secure screen.</p>
+          </div>
+
+          <form class="payment-card" id="payment-form" action="payfast-checkout.php" method="post">
+            <div class="payment-card-head">
+              <p class="fnb-kicker">Website deposit</p>
+              <h3>Start a secure payment</h3>
+              <p>A 50% deposit is charged for the selected fixed-price website package.</p>
+            </div>
+            <div class="payment-fields two-column">
+              <label>
+                First name
+                <input type="text" name="name_first" autocomplete="given-name" maxlength="100" required>
+              </label>
+              <label>
+                Last name
+                <input type="text" name="name_last" autocomplete="family-name" maxlength="100" required>
+              </label>
+            </div>
+            <div class="payment-fields">
+              <label>
+                Email address
+                <input type="email" name="email_address" autocomplete="email" maxlength="100" required>
+              </label>
+              <label>
+                Mobile number
+                <input type="tel" name="cell_number" autocomplete="tel" inputmode="tel" maxlength="20" placeholder="e.g. 072 123 4567" required>
+              </label>
+              <label>
+                Website package
+                <select name="package" id="payment-package" required>
+                  <option value="">Choose a package</option>
+                  <option value="website-1" data-deposit="1750">1-page website — R3,500</option>
+                  <option value="website-2" data-deposit="2250">2-page website — R4,500</option>
+                  <option value="website-3" data-deposit="2750">3-page website — R5,500</option>
+                  <option value="website-4" data-deposit="3000">4-page website — R6,000</option>
+                  <option value="website-5" data-deposit="3250">5-page website — R6,500</option>
+                  <option value="website-6" data-deposit="3750">6-page website — R7,500</option>
+                  <option value="website-7" data-deposit="4250">7-page website — R8,500</option>
+                </select>
+              </label>
+            </div>
+            <div class="payment-total" aria-live="polite">
+              <span>Deposit due now</span>
+              <strong id="payment-deposit">Choose a package</strong>
+            </div>
+            <label class="payment-consent">
+              <input type="checkbox" name="terms_accepted" value="1" required>
+              <span>I understand this is a 50% project deposit and the remaining balance is due according to the confirmed project agreement.</span>
+            </label>
+            <input class="payment-honeypot" type="text" name="company_website" tabindex="-1" autocomplete="off" aria-hidden="true">
+            <button class="button primary full" type="submit">Continue to secure PayFast checkout</button>
+            <p class="payment-provider-note">Your bank login or card details are never entered on or stored by Titanmark.</p>
+          </form>
+        </div>
+      </section>
+
+      <section class="section quote-section" id="pay-online" aria-labelledby="quote-title">
+        <div class="section-inner quote-layout">
+          <div class="quote-intro">
+            <p class="eyebrow">Choose a service</p>
+            <h2 id="quote-title">Tell us what you want done. We’ll confirm the price before work starts.</h2>
+            <p>Select one or more services below and send the request to Titanmark. Fixed website packages can also be paid securely through PayFast after the project scope is understood.</p>
+          </div>
+
+          <div class="quote-choice-grid" aria-label="Services available for a quote">
+            <a class="quote-choice quote-service" href="#contact" data-service-choice="Logo design"><strong>Logo design</strong><span>Brand marks and visual identity</span></a>
+            <a class="quote-choice quote-service" href="#contact" data-service-choice="Website design"><strong>Website design</strong><span>One-page, business, or custom sites</span></a>
+            <a class="quote-choice quote-service" href="#contact" data-service-choice="Business card design"><strong>Business cards</strong><span>Professional print-ready layouts</span></a>
+            <a class="quote-choice quote-service" href="#contact" data-service-choice="Flyer or brochure"><strong>Flyers and brochures</strong><span>Print and promotional designs</span></a>
+            <a class="quote-choice quote-service" href="#contact" data-service-choice="Social media design"><strong>Social media graphics</strong><span>Posts, covers, and campaign assets</span></a>
+            <a class="quote-choice quote-service" href="#contact" data-service-choice="Website maintenance"><strong>Website maintenance</strong><span>Updates, edits, and ongoing support</span></a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-alt" id="portfolio" aria-labelledby="portfolio-title">
+        <div class="section-inner">
+          <div class="section-heading">
+            <p class="eyebrow">Portfolio</p>
+            <h2 id="portfolio-title">Digital projects delivered by Titanmark.</h2>
+            <p>A concise project directory for clients, partners, and prospective businesses.</p>
+          </div>
+
+          <div class="project-register" aria-label="Titanmark project register">
+            <article class="project-entry">
+              <div class="project-entry-head">
+                <span>TM / PROJECT 001</span>
+                <span class="project-status"><i aria-hidden="true"></i> Live</span>
+              </div>
+              <div class="project-entry-body">
+                <div class="project-record">
+                  <p class="record-label">Project</p>
+                  <h3>NeuroConnect</h3>
+                  <dl>
+                    <div><dt>Sector</dt><dd>Community &amp; health support</dd></div>
+                    <div><dt>Service</dt><dd>Website design &amp; development</dd></div>
+                    <div><dt>Delivery</dt><dd>Responsive digital platform</dd></div>
+                  </dl>
+                </div>
+                <div class="qr-code-frame">
+                  <a class="portfolio-qr" href="https://www.neuroconnect.co.za" target="_blank" rel="noopener" aria-label="Open the NeuroConnect website">
+                    <img src="assets/neuroconnect-qr.png" alt="QR code for NeuroConnect">
+                  </a>
+                  <div><strong>View live project</strong><span>Scan with phone camera</span></div>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-entry">
+              <div class="project-entry-head">
+                <span>TM / PROJECT 002</span>
+                <span class="project-status"><i aria-hidden="true"></i> Live</span>
+              </div>
+              <div class="project-entry-body">
+                <div class="project-record">
+                  <p class="record-label">Project</p>
+                  <h3>Kyle Notley</h3>
+                  <dl>
+                    <div><dt>Sector</dt><dd>Professional portfolio</dd></div>
+                    <div><dt>Service</dt><dd>Creative direction &amp; development</dd></div>
+                    <div><dt>Delivery</dt><dd>Responsive personal platform</dd></div>
+                  </dl>
+                </div>
+                <div class="qr-code-frame">
+                  <a class="portfolio-qr" href="https://www.notleykyle.co.za" target="_blank" rel="noopener" aria-label="Open the Kyle Notley website">
+                    <img src="assets/notleykyle-qr.png" alt="QR code for Kyle Notley">
+                  </a>
+                  <div><strong>View live project</strong><span>Scan with phone camera</span></div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="testimonials" aria-labelledby="testimonials-title">
+        <div class="section-inner">
+          <div class="section-heading">
+            <p class="eyebrow">Testimonials</p>
+            <h2 id="testimonials-title">The experience Titanmark aims to deliver.</h2>
+          </div>
+
+          <div class="testimonial-grid">
+            <figure class="quote-card">
+              <blockquote>
+                "The site feels professional, direct, and easy for people to understand quickly."
+              </blockquote>
+              <figcaption>Business website client</figcaption>
+            </figure>
+            <figure class="quote-card">
+              <blockquote>
+                "The structure made the offer clearer and gave the project a stronger first impression."
+              </blockquote>
+              <figcaption>Portfolio website client</figcaption>
+            </figure>
+            <figure class="quote-card">
+              <blockquote>
+                "The launch process was simple, the sections were clean, and the final handover was clear."
+              </blockquote>
+              <figcaption>Service website client</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="section contact-section" id="contact" aria-labelledby="contact-title">
+        <div class="section-inner contact-layout">
+          <div>
+            <p class="eyebrow">Contact</p>
+            <h2 id="contact-title">Ready to build the visible layer and the depth below it?</h2>
+            <p>
+              Tell Titanmark what you need and select one or more services in the form.
+            </p>
+            <div class="contact-services">
+              <h3>What we can do</h3>
+              <ul>
+                <li>Logo and brand design</li>
+                <li>Website design and development</li>
+                <li>Business cards</li>
+                <li>Flyers, brochures, and banners</li>
+                <li>Social media graphics</li>
+                <li>Online payment setup</li>
+                <li>Website maintenance</li>
+              </ul>
+            </div>
+            <div class="contact-lines">
+              <a href="mailto:hello@titanmark.co.za">hello@titanmark.co.za</a>
+              <a
+                class="whatsapp-link"
+                href="https://wa.me/27726999872?text=Hi%20Titanmark%2C%20I%20would%20like%20to%20discuss%20a%20project."
+                target="_blank"
+                rel="noopener"
+              >Chat on WhatsApp</a>
+            </div>
+          </div>
+
+          <form class="contact-form" id="contact-form" action="https://formsubmit.co/hello@titanmark.co.za" method="POST">
+            <input type="hidden" name="_subject" value="New Titanmark website enquiry">
+            <input type="hidden" name="_template" value="table">
+            <input class="form-honeypot" type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+            <label>
+              Name
+              <input type="text" name="name" autocomplete="name" required>
+            </label>
+            <label>
+              Email
+              <input type="email" name="email" autocomplete="email" required>
+            </label>
+            <fieldset class="service-choices">
+              <legend>What do you need done?</legend>
+              <p>Select one or more services.</p>
+              <div class="choice-grid">
+                <label><input type="checkbox" name="project" value="Logo design"> Logo design</label>
+                <label><input type="checkbox" name="project" value="Website design"> Website design</label>
+                <label><input type="checkbox" name="project" value="Business card design"> Business cards</label>
+                <label><input type="checkbox" name="project" value="Flyer or brochure"> Flyers or brochures</label>
+                <label><input type="checkbox" name="project" value="Social media design"> Social media design</label>
+                <label><input type="checkbox" name="project" value="Pull-up banner"> Pull-up banners</label>
+                <label><input type="checkbox" name="project" value="Online payment setup"> Online payment setup</label>
+                <label><input type="checkbox" name="project" value="Website maintenance"> Website maintenance</label>
+              </div>
+            </fieldset>
+            <label>
+              Message
+              <textarea name="message" rows="5" placeholder="For a website: how many pages, services or online shop? For a 
+              logo: do you have colours or ideas, or should we start from scratch? Tell us anything else you need."></textarea>
+            </label>
+            <p class="email-note">Your enquiry will be sent directly to Titanmark.</p>
+            <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+            <button class="button primary full" type="submit">Send my enquiry</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <dialog class="service-builder" id="service-builder" aria-labelledby="builder-title">
+      <div class="builder-head">
+        <div>
+          <p class="eyebrow">Build your project</p>
+          <h2 id="builder-title">Choose what you’d like Titanmark to create.</h2>
+          <p>Pick a service and option. The total is a starting price; a deposit invoice is confirmed before work begins.</p>
+        </div>
+        <button class="builder-close" type="button" aria-label="Close service chooser">×</button>
+      </div>
+      <div class="builder-options" role="list" aria-label="Available service options">
+        <button type="button" class="builder-option" data-service="Website design" data-option="One-page website" data-price="R3,500" data-package="website-1"><strong>One-page website</strong><span>R3,500 · one clear scrolling page</span></button>
+        <button type="button" class="builder-option" data-service="Website design" data-option="2-page website" data-price="R4,500" data-package="website-2"><strong>2-page website</strong><span>R4,500 · homepage plus one focused page</span></button>
+        <button type="button" class="builder-option" data-service="Website design" data-option="3-page website" data-price="R5,500" data-package="website-3"><strong>3-page website</strong><span>R5,500 · room for services or about</span></button>
+        <button type="button" class="builder-option" data-service="Website design" data-option="4-page website" data-price="R6,000" data-package="website-4"><strong>4-page website</strong><span>R6,000 · stronger business structure</span></button>
+        <button type="button" class="builder-option" data-service="Website design" data-option="5-page website" data-price="R6,500" data-package="website-5"><strong>5-page website</strong><span>R6,500 · business website starting point</span></button>
+        <button type="button" class="builder-option" data-service="Website design" data-option="6-page website" data-price="R7,500" data-package="website-6"><strong>6-page website</strong><span>R7,500 · services, proof, and contact</span></button>
+        <button type="button" class="builder-option" data-service="Website design" data-option="7-page website" data-price="R8,500" data-package="website-7"><strong>7-page website</strong><span>R8,500 · fuller website build</span></button>
+        <button type="button" class="builder-option" data-service="Website design" data-option="Custom website (8+ pages)" data-price="From R10,000"><strong>Custom website</strong><span>From R10,000 · 8+ pages or special features</span></button>
+        <button type="button" class="builder-option" data-service="Branding" data-option="Starter Logo" data-price="R850"><strong>Starter Logo</strong><span>R850 · 1 concept and web-ready files</span></button>
+        <button type="button" class="builder-option" data-service="Branding" data-option="Professional Logo" data-price="R1,800"><strong>Professional Logo</strong><span>R1,800 · 3 concepts plus scalable print files</span></button>
+        <button type="button" class="builder-option" data-service="Branding" data-option="Brand Identity" data-price="From R3,500"><strong>Brand Identity</strong><span>From R3,500 · logo, colours, type and mini guide</span></button>
+        <button type="button" class="builder-option" data-service="Business cards" data-option="Single-sided Business Card" data-price="R350"><strong>Single-sided Business Card</strong><span>R350 · 90 × 50 mm print-ready design</span></button>
+        <button type="button" class="builder-option" data-service="Business cards" data-option="Double-sided Business Card" data-price="R500"><strong>Double-sided Business Card</strong><span>R500 · front and back print-ready design</span></button>
+        <button type="button" class="builder-option" data-service="Print design" data-option="Single-sided A5/A4 Flyer" data-price="R450"><strong>Single-sided Flyer</strong><span>R450 · A5 or A4 print-ready artwork</span></button>
+        <button type="button" class="builder-option" data-service="Print design" data-option="Double-sided A5/A4 Flyer" data-price="R650"><strong>Double-sided Flyer</strong><span>R650 · front and back artwork</span></button>
+        <button type="button" class="builder-option" data-service="Print design" data-option="DL Tri-fold Brochure" data-price="R900"><strong>Tri-fold Brochure</strong><span>R900 · six-panel print-ready design</span></button>
+        <button type="button" class="builder-option" data-service="Print design" data-option="Pull-up Banner" data-price="From R650"><strong>Pull-up Banner</strong><span>From R650 · sized to printer specification</span></button>
+        <button type="button" class="builder-option" data-service="Social media design" data-option="Social media graphics" data-price="From R250"><strong>Social media graphics</strong><span>From R250 · posts, covers, and campaign assets</span></button>
+        <button type="button" class="builder-option" data-service="Online payment setup" data-option="Online payment setup" data-price="From R750"><strong>Payment setup</strong><span>From R750 · payment flow for your website</span></button>
+        <button type="button" class="builder-option" data-service="Website maintenance" data-option="Website maintenance" data-price="From R350/month"><strong>Website maintenance</strong><span>From R350/month · updates and support</span></button>
+      </div>
+      <div class="builder-summary" aria-live="polite">
+        <p id="builder-selection">Select an option to continue.</p>
+        <button class="button primary" id="builder-invoice" type="button" disabled>Request deposit invoice</button>
+      </div>
+    </dialog>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <img src="assets/titanmark-logo-dark.png" alt="Titanmark logo">
+        <p>Titanmark builds websites with design above and strategy below.</p>
+        <p class="company-details"><strong>TITANMARK (Pty) Ltd</strong><br><span>Registration number: 2026/551970/07</span></p>
+        <p class="footer-note">&copy; <span id="year"></span> Titanmark. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <audio id="ambient-audio" src="assets/titanmark-chill.m4a" preload="metadata" loop></audio>
+    <button class="audio-control" id="audio-control" type="button" aria-pressed="false">
+      <span class="audio-icon" aria-hidden="true">▶</span>
+      <span id="audio-label">Play chilled theme</span>
+    </button>
+    <a
+      class="whatsapp-float whatsapp-link"
+      href="https://wa.me/27726999872?text=Hi%20Titanmark%2C%20I%20would%20like%20to%20discuss%20a%20project."
+      target="_blank"
+      rel="noopener"
+      aria-label="Contact Titanmark on WhatsApp"
+    >WA</a>
+    <script src="script.js?v=20260725-2"></script>
+  </body>
+</html>
