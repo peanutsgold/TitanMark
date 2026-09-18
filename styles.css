@@ -1046,7 +1046,7 @@ h3 {
 .payment-consent input { margin-top: 4px; accent-color: var(--violet); }
 .payment-provider-note { margin-top: -6px; font-size: 0.74rem; text-align: center; }
 .payment-honeypot { position: absolute !important; left: -10000px !important; width: 1px !important; height: 1px !important; opacity: 0 !important; }
-.payment-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.payment-actions { display: grid; grid-template-columns: 1fr; gap: 10px; }
 .payment-actions .button:disabled { opacity: 0.42; cursor: not-allowed; }
 
 .quote-layout,

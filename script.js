@@ -9,8 +9,6 @@ const year = document.querySelector("#year");
 const paymentForm = document.querySelector("#payment-form");
 const projectDetails = document.querySelector("#project-details");
 const projectEnquiryButton = document.querySelector("#project-enquiry");
-const paymentSubmitButton = document.querySelector("#payment-submit");
-const paymentTerms = document.querySelector("#payment-terms");
 const paymentStatus = document.querySelector("#payment-status");
 const whatsappLinks = document.querySelectorAll(".whatsapp-link");
 const ambientAudio = document.querySelector("#ambient-audio");
@@ -200,7 +198,6 @@ paymentPackage?.addEventListener("change", () => {
         ? "Quote first"
         : "Choose a service";
   }
-  if (paymentSubmitButton) paymentSubmitButton.disabled = deposit <= 0;
 });
 
 if (navToggle && siteNav) {
@@ -274,9 +271,7 @@ builderOptions.forEach((option) => {
     }
     if (builderInvoice) {
       builderInvoice.disabled = false;
-      builderInvoice.textContent = option.dataset.package
-        ? "Pay 50% deposit with PayFast"
-        : "Request deposit invoice";
+      builderInvoice.textContent = "Request deposit invoice";
     }
   });
 });
@@ -318,26 +313,7 @@ builderInvoice?.addEventListener("click", () => {
 });
 
 paymentForm?.addEventListener("submit", (event) => {
-  const selectedOption = paymentPackage?.options[paymentPackage.selectedIndex];
-  const deposit = Number(selectedOption?.dataset.deposit || 0);
-
-  if (deposit <= 0) {
-    event.preventDefault();
-    if (paymentStatus) {
-      paymentStatus.textContent = "This service needs a quote first. Please use “Send project request”.";
-      paymentStatus.classList.add("is-error");
-    }
-    return;
-  }
-
-  if (!paymentTerms?.checked) {
-    event.preventDefault();
-    paymentTerms?.focus();
-    if (paymentStatus) {
-      paymentStatus.textContent = "Please accept the 50% project deposit terms before continuing.";
-      paymentStatus.classList.add("is-error");
-    }
-  }
+  event.preventDefault();
 });
 
 projectEnquiryButton?.addEventListener("click", async () => {

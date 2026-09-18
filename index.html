@@ -11,7 +11,7 @@
     >
     <link rel="icon" type="image/png" href="assets/favicon.png">
     <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
-    <link rel="stylesheet" href="styles.css?v=20260812-1">
+    <link rel="stylesheet" href="styles.css?v=20260918-1">
   </head>
   <body>
     <header class="site-header">
@@ -544,20 +544,20 @@
       <section class="section banking-section" id="payments" aria-labelledby="payments-title">
         <div class="section-inner banking-layout">
           <div class="banking-copy">
-            <p class="eyebrow">One project and payment form</p>
-            <h2 id="payments-title">Tell us what you need and make your payment in one place.</h2>
-            <p>Choose the exact service, add your project instructions, and enter your contact details. Pay a fixed-price deposit immediately, or send the same form for a quote when the final price needs to be confirmed.</p>
+            <p class="eyebrow">One project request form</p>
+            <h2 id="payments-title">Tell us what you need — we’ll arrange payment directly with you.</h2>
+            <p>Choose the exact service, add your project instructions, and enter your contact details. We’ll reply with the deposit amount and our banking details so you can pay directly from your own bank account or card.</p>
             <div class="banking-assurances" aria-label="Payment assurances">
-              <span>Secure PayFast checkout</span>
-              <span>Instant EFT and card options</span>
-              <span>No banking PINs stored here</span>
+              <span>Pay directly into our account</span>
+              <span>EFT or card, your choice</span>
+              <span>We confirm once payment reflects</span>
             </div>
-            <ol class="payment-flow" aria-label="How online payment works">
-              <li><strong>Enter your details</strong><span>Select a fixed-price service and provide your contact information.</span></li>
-              <li><strong>Choose your bank</strong><span>PayFast opens securely so you can choose an available bank or another payment method.</span></li>
-              <li><strong>Receive confirmation</strong><span>PayFast verifies the transaction and sends the result to Titanmark.</span></li>
+            <ol class="payment-flow" aria-label="How payment works">
+              <li><strong>Send your request</strong><span>Select a service and share your contact and project details.</span></li>
+              <li><strong>Get our banking details</strong><span>We reply with the deposit amount due and our account details.</span></li>
+              <li><strong>Pay and confirm</strong><span>Pay via EFT or card from your own bank, then send proof of payment.</span></li>
             </ol>
-            <p class="payment-safety-note">Never send your banking password, PIN, OTP, card number or CVV to Titanmark. Those details are entered only on PayFast or your bank’s secure screen.</p>
+            <p class="payment-safety-note">Never send your banking password, PIN, OTP, card number or CVV to Titanmark or anyone else. You only ever pay through your own bank’s app, card machine, or secure banking site.</p>
             <div class="contact-lines">
               <a href="mailto:hello@titanmark.co.za">hello@titanmark.co.za</a>
               <a
@@ -569,13 +569,13 @@
             </div>
           </div>
 
-          <form class="payment-card" id="payment-form" action="payfast-checkout.php" method="post">
+          <form class="payment-card" id="payment-form">
             <input type="hidden" name="_subject" value="New Titanmark project enquiry">
             <input type="hidden" name="_template" value="table">
             <div class="payment-card-head">
               <p class="fnb-kicker">Project details and payment</p>
               <h3>What do you need done?</h3>
-              <p>Select a service, explain the project, and choose how you want to continue.</p>
+              <p>Select a service, explain the project, and send us your request.</p>
             </div>
             <div class="payment-fields two-column">
               <label>
@@ -649,7 +649,7 @@
               </label>
             </div>
             <div class="payment-total" aria-live="polite">
-              <span>Deposit due now</span>
+              <span>Estimated deposit</span>
               <strong id="payment-deposit">Choose a service</strong>
             </div>
             <label class="payment-consent">
@@ -658,11 +658,10 @@
             </label>
             <input class="payment-honeypot" type="text" name="company_website" tabindex="-1" autocomplete="off" aria-hidden="true">
             <div class="payment-actions">
-              <button class="button primary full" id="payment-submit" type="submit" disabled>Pay 50% deposit with PayFast</button>
-              <button class="button secondary full" id="project-enquiry" type="button">Send project request</button>
+              <button class="button primary full" id="project-enquiry" type="button">Send project request</button>
             </div>
             <p class="form-status" id="payment-status" role="status" aria-live="polite"></p>
-            <p class="payment-provider-note">Your bank login or card details are never entered on or stored by Titanmark.</p>
+            <p class="payment-provider-note">We'll reply with our banking details. Your bank login or card details are never entered on or stored by Titanmark.</p>
           </form>
         </div>
       </section>
@@ -856,6 +855,6 @@
       rel="noopener"
       aria-label="Contact Titanmark on WhatsApp"
     >WA</a>
-    <script src="script.js?v=20260812-1"></script>
+    <script src="script.js?v=20260918-1"></script>
   </body>
 </html>
