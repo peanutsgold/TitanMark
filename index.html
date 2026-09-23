@@ -27,7 +27,7 @@
       <nav class="site-nav" id="site-nav" aria-label="Main navigation">
         <a href="#services">Services</a>
         <a href="#price-guide">Prices</a>
-        <a href="#payments">Start a project</a>
+        <a class="whatsapp-link" href="#" target="_blank" rel="noopener">Start a project</a>
         <a href="#portfolio">Portfolio</a>
         <a href="#testimonials">Testimonials</a>
       </nav>
@@ -54,7 +54,7 @@
             </div>
 
             <div class="hero-actions" aria-label="Primary actions">
-              <a class="button primary" href="#payments">Start your project</a>
+              <a class="button primary whatsapp-link" href="#" target="_blank" rel="noopener">Start your project</a>
               <a class="button secondary" href="#portfolio">See the work</a>
             </div>
 
@@ -335,7 +335,7 @@
             <p class="eyebrow">Request a quote</p>
             <h2 id="pricing-title">Tell us what you need done and we’ll prepare the right quote.</h2>
             <p>Choose a starting option below, or use the enquiry form to describe exactly what you need.</p>
-            <a class="button primary" href="#payments">Describe what you need</a>
+            <a class="button primary whatsapp-link" href="#" target="_blank" rel="noopener">Describe what you need</a>
           </div>
 
           <div class="pricing-grid" aria-label="Website packages">
@@ -541,131 +541,6 @@
         </div>
       </section>
 
-      <section class="section banking-section" id="payments" aria-labelledby="payments-title">
-        <div class="section-inner banking-layout">
-          <div class="banking-copy">
-            <p class="eyebrow">One project request form</p>
-            <h2 id="payments-title">Tell us what you need — we’ll arrange payment directly with you.</h2>
-            <p>Choose the exact service, add your project instructions, and enter your contact details. We’ll reply with the deposit amount and our banking details so you can pay directly from your own bank account or card.</p>
-            <div class="banking-assurances" aria-label="Payment assurances">
-              <span>Pay directly into our account</span>
-              <span>EFT or card, your choice</span>
-              <span>We confirm once payment reflects</span>
-            </div>
-            <ol class="payment-flow" aria-label="How payment works">
-              <li><strong>Send your request</strong><span>Select a service and share your contact and project details.</span></li>
-              <li><strong>Get our banking details</strong><span>We reply with the deposit amount due and our account details.</span></li>
-              <li><strong>Pay and confirm</strong><span>Pay via EFT or card from your own bank, then send proof of payment.</span></li>
-            </ol>
-            <p class="payment-safety-note">Never send your banking password, PIN, OTP, card number or CVV to Titanmark or anyone else. You only ever pay through your own bank’s app, card machine, or secure banking site.</p>
-            <div class="contact-lines">
-              <a href="mailto:hello@titanmark.co.za">hello@titanmark.co.za</a>
-              <a
-                class="whatsapp-link"
-                href="https://wa.me/27726999872?text=Hi%20Titanmark%2C%20I%20would%20like%20to%20discuss%20a%20project."
-                target="_blank"
-                rel="noopener"
-              >Chat on WhatsApp</a>
-            </div>
-          </div>
-
-          <form class="payment-card" id="payment-form">
-            <input type="hidden" name="_subject" value="New Titanmark project enquiry">
-            <input type="hidden" name="_template" value="table">
-            <div class="payment-card-head">
-              <p class="fnb-kicker">Project details and payment</p>
-              <h3>What do you need done?</h3>
-              <p>Select a service, explain the project, and send us your request.</p>
-            </div>
-            <div class="payment-fields two-column">
-              <label>
-                First name
-                <input type="text" name="name_first" autocomplete="given-name" maxlength="100" required>
-              </label>
-              <label>
-                Last name
-                <input type="text" name="name_last" autocomplete="family-name" maxlength="100" required>
-              </label>
-            </div>
-            <div class="payment-fields">
-              <label>
-                Email address
-                <input type="email" name="email_address" autocomplete="email" maxlength="100" required>
-              </label>
-              <label>
-                Mobile number
-                <input type="tel" name="cell_number" autocomplete="tel" inputmode="tel" maxlength="20" placeholder="e.g. 072 123 4567" required>
-              </label>
-              <label>
-                Service or website package
-                <select name="package" id="payment-package" required>
-                  <option value="">Choose a service</option>
-                  <optgroup label="Business cards">
-                    <option value="business-card-single" data-deposit="200">Single-sided business card — R400</option>
-                    <option value="business-card-double" data-deposit="300">Double-sided business card — R600</option>
-                  </optgroup>
-                  <optgroup label="Logo design">
-                    <option value="starter-logo" data-deposit="425">Starter logo — R850</option>
-                    <option value="professional-logo" data-deposit="900">Professional logo — R1,800</option>
-                  </optgroup>
-                  <optgroup label="Print design">
-                    <option value="flyer-single" data-deposit="225">Single-sided flyer — R450</option>
-                    <option value="flyer-double" data-deposit="325">Double-sided flyer — R650</option>
-                    <option value="brochure-trifold" data-deposit="450">Tri-fold brochure — R900</option>
-                  </optgroup>
-                  <optgroup label="Website design">
-                    <option value="website-1" data-deposit="1750">1-page website — R3,500</option>
-                    <option value="website-2" data-deposit="2250">2-page website — R4,500</option>
-                    <option value="website-3" data-deposit="2750">3-page website — R5,500</option>
-                    <option value="website-4" data-deposit="3000">4-page website — R6,000</option>
-                    <option value="website-5" data-deposit="3250">5-page website — R6,500</option>
-                    <option value="website-6" data-deposit="3750">6-page website — R7,500</option>
-                    <option value="website-7" data-deposit="4250">7-page website — R8,500</option>
-                  </optgroup>
-                  <optgroup label="Social media design">
-                    <option value="social-post" data-deposit="125">Single social media post — R250</option>
-                    <option value="social-story" data-deposit="125">Story graphic — R250</option>
-                    <option value="social-pack-5" data-deposit="375">5-post branded pack — R750</option>
-                  </optgroup>
-                  <optgroup label="Website video placement">
-                    <option value="video-embed" data-deposit="175">Embed a supplied YouTube video — R350</option>
-                    <option value="video-upload" data-deposit="325">Compress, upload and place a supplied video — R650</option>
-                    <option value="video-section" data-deposit="425">Complete website video section — R850</option>
-                  </optgroup>
-                  <optgroup label="Quote required before payment">
-                    <option value="quote-brand-identity" data-deposit="0">Brand identity — From R3,500</option>
-                    <option value="quote-custom-website" data-deposit="0">Custom website — 8+ pages</option>
-                    <option value="quote-pull-up-banner" data-deposit="0">Pull-up banner — From R650</option>
-                    <option value="quote-social-banner" data-deposit="0">Social cover or profile banner — From R350</option>
-                    <option value="quote-payment-setup" data-deposit="0">Online payment setup</option>
-                    <option value="quote-maintenance" data-deposit="0">Website maintenance — From R350/month</option>
-                    <option value="quote-video-production" data-deposit="0">Video editing or filming</option>
-                  </optgroup>
-                </select>
-              </label>
-              <label>
-                What must Titanmark create?
-                <textarea name="project_details" id="project-details" rows="5" maxlength="1200" placeholder="Tell us the wording, colours, pages, size, style, deadline, or anything else needed for your project." required></textarea>
-              </label>
-            </div>
-            <div class="payment-total" aria-live="polite">
-              <span>Estimated deposit</span>
-              <strong id="payment-deposit">Choose a service</strong>
-            </div>
-            <label class="payment-consent">
-              <input type="checkbox" name="terms_accepted" id="payment-terms" value="1" required>
-              <span>I accept Titanmark's <a href="terms.html" target="_blank" rel="noopener">service and payment terms</a>, including the 50% project deposit, and have read the <a href="refund-delivery.html" target="_blank" rel="noopener">refund and delivery policy</a>.</span>
-            </label>
-            <input class="payment-honeypot" type="text" name="company_website" tabindex="-1" autocomplete="off" aria-hidden="true">
-            <div class="payment-actions">
-              <button class="button primary full" id="project-enquiry" type="button">Send project request</button>
-            </div>
-            <p class="form-status" id="payment-status" role="status" aria-live="polite"></p>
-            <p class="payment-provider-note">We'll reply with our banking details. Your bank login or card details are never entered on or stored by Titanmark.</p>
-          </form>
-        </div>
-      </section>
-
       <section class="section section-alt" id="portfolio" aria-labelledby="portfolio-title">
         <div class="section-inner">
           <div class="section-heading">
@@ -807,7 +682,7 @@
       </div>
       <div class="builder-summary" aria-live="polite">
         <p id="builder-selection">Select an option to continue.</p>
-        <button class="button primary" id="builder-invoice" type="button" disabled>Request deposit invoice</button>
+        <button class="button primary" id="builder-invoice" type="button" disabled>Request this on WhatsApp</button>
       </div>
     </dialog>
 

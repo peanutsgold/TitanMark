@@ -6,10 +6,6 @@ const serviceDetailTitle = document.querySelector("#service-detail-title");
 const serviceDetailDescription = document.querySelector("#service-detail-description");
 const serviceDetailList = document.querySelector("#service-detail-list");
 const year = document.querySelector("#year");
-const paymentForm = document.querySelector("#payment-form");
-const projectDetails = document.querySelector("#project-details");
-const projectEnquiryButton = document.querySelector("#project-enquiry");
-const paymentStatus = document.querySelector("#payment-status");
 const whatsappLinks = document.querySelectorAll(".whatsapp-link");
 const ambientAudio = document.querySelector("#ambient-audio");
 const audioControl = document.querySelector("#audio-control");
@@ -23,8 +19,6 @@ const builderSelection = document.querySelector("#builder-selection");
 const builderInvoice = document.querySelector("#builder-invoice");
 const builderClose = document.querySelector(".builder-close");
 const costCards = document.querySelectorAll(".cost-card");
-const paymentPackage = document.querySelector("#payment-package");
-const paymentDeposit = document.querySelector("#payment-deposit");
 const whatsappNumber = ["27", "72", "699", "9872"].join("");
 const chilledTracks = [
   { title: "Titanmark Chill", src: "assets/music/titanmark-chill.m4a" },
@@ -184,22 +178,6 @@ if (year) {
   year.textContent = new Date().getFullYear();
 }
 
-paymentPackage?.addEventListener("change", () => {
-  const selectedOption = paymentPackage.options[paymentPackage.selectedIndex];
-  const deposit = Number(selectedOption?.dataset.deposit || 0);
-  if (paymentDeposit) {
-    paymentDeposit.textContent = deposit
-      ? new Intl.NumberFormat("en-ZA", {
-          style: "currency",
-          currency: "ZAR",
-          maximumFractionDigits: 0
-        }).format(deposit)
-      : selectedOption?.value
-        ? "Quote first"
-        : "Choose a service";
-  }
-});
-
 if (navToggle && siteNav) {
   navToggle.addEventListener("click", () => {
     const isOpen = siteNav.classList.toggle("is-open");
@@ -231,7 +209,7 @@ const resetServiceBuilder = () => {
   if (builderSelection) builderSelection.textContent = "Select an option to continue.";
   if (builderInvoice) {
     builderInvoice.disabled = true;
-    builderInvoice.textContent = "Request deposit invoice";
+    builderInvoice.textContent = "Request this on WhatsApp";
   }
 };
 
@@ -271,88 +249,21 @@ builderOptions.forEach((option) => {
     }
     if (builderInvoice) {
       builderInvoice.disabled = false;
-      builderInvoice.textContent = "Request deposit invoice";
+      builderInvoice.textContent = "Request this on WhatsApp";
     }
   });
 });
 
 builderInvoice?.addEventListener("click", () => {
   if (!selectedBuilderOption) return;
-  const { service, option, price, package: packageCode } = selectedBuilderOption;
+  const { option, price } = selectedBuilderOption;
 
-  if (packageCode) {
-    if (paymentPackage) {
-      paymentPackage.value = packageCode;
-      paymentPackage.dispatchEvent(new Event("change"));
-    }
-    serviceBuilder?.close();
-    document.querySelector("#payments")?.scrollIntoView({ behavior: "smooth", block: "start" });
-    window.setTimeout(() => document.querySelector('input[name="name_first"]')?.focus(), 500);
-    return;
-  }
-
-  const checkbox = [...document.querySelectorAll('input[name="project"]')]
-    .find((input) =>
-      input.value === service ||
-      (service === "Branding" && input.value === "Logo design") ||
-      (service === "Business cards" && input.value === "Business card design") ||
-      (service === "Print design" && input.value === "Flyer or brochure")
-    );
-  if (checkbox) checkbox.checked = true;
-
-  if (projectDetails) {
-    projectDetails.value = `I would like Titanmark to create: ${option} (${price}).\n\nProject details: `;
-  }
-  if (paymentPackage) {
-    paymentPackage.value = "";
-    paymentPackage.dispatchEvent(new Event("change"));
-  }
   serviceBuilder?.close();
-  document.querySelector("#payments")?.scrollIntoView({ behavior: "smooth", block: "start" });
-  window.setTimeout(() => projectDetails?.focus(), 500);
-});
-
-paymentForm?.addEventListener("submit", (event) => {
-  event.preventDefault();
-});
-
-projectEnquiryButton?.addEventListener("click", async () => {
-  if (!paymentForm?.reportValidity()) return;
-
-  const selectedOption = paymentPackage?.options[paymentPackage.selectedIndex];
-  const data = new FormData(paymentForm);
-  data.delete("terms_accepted");
-  data.delete("company_website");
-  data.set("selected_service", selectedOption?.textContent?.trim() || "General project");
-
-  if (paymentStatus) {
-    paymentStatus.classList.remove("is-success", "is-error");
-    paymentStatus.textContent = "Sending your project request…";
-  }
-  projectEnquiryButton.disabled = true;
-
-  try {
-    const response = await fetch("https://formsubmit.co/ajax/hello@titanmark.co.za", {
-      method: "POST",
-      headers: { Accept: "application/json" },
-      body: data,
-    });
-    if (!response.ok) throw new Error("Unable to send project request");
-
-    paymentForm.reset();
-    paymentPackage?.dispatchEvent(new Event("change"));
-    if (paymentStatus) {
-      paymentStatus.textContent = "Thank you. Your project request was sent to Titanmark.";
-      paymentStatus.classList.add("is-success");
-    }
-  } catch {
-    if (paymentStatus) {
-      paymentStatus.textContent = "The request could not be sent. Please email hello@titanmark.co.za or use WhatsApp.";
-      paymentStatus.classList.add("is-error");
-    }
-  } finally {
-    projectEnquiryButton.disabled = false;
-  }
+  window.open(
+    whatsappUrl(`Hi Titanmark, I would like to discuss a project: ${option} (${price}).`),
+    "_blank",
+    "noopener"
+  );
 });
 
 const loadChilledTrack = () => {

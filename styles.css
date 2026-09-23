@@ -810,245 +810,6 @@ h3 {
     linear-gradient(180deg, #030407, #080812);
 }
 
-.banking-section {
-  background:
-    radial-gradient(circle at 82% 48%, rgba(132, 48, 225, 0.17), transparent 28%),
-    linear-gradient(180deg, #04050a, #080813);
-}
-
-.banking-layout {
-  display: grid;
-  grid-template-columns: minmax(0, 0.92fr) minmax(420px, 0.78fr);
-  gap: clamp(34px, 6vw, 80px);
-  align-items: start;
-}
-
-.banking-copy > p:not(.eyebrow) {
-  max-width: 680px;
-  color: var(--muted);
-  font-size: 1.08rem;
-}
-
-.banking-assurances {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 28px;
-}
-
-.banking-assurances span {
-  display: inline-flex;
-  align-items: center;
-  gap: 9px;
-  padding: 9px 13px;
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  color: #ded7e6;
-  font-size: 0.74rem;
-  font-weight: 720;
-}
-
-.banking-assurances span::before {
-  content: "";
-  width: 7px;
-  height: 7px;
-  transform: rotate(45deg);
-  background: var(--violet-light);
-  box-shadow: 0 0 12px rgba(184, 93, 255, 0.6);
-}
-
-.payment-card {
-  display: grid;
-  gap: 20px;
-  padding: 30px;
-  border: 1px solid var(--line-strong);
-  border-radius: var(--radius);
-  background:
-    linear-gradient(145deg, rgba(173, 85, 255, 0.14), transparent 42%),
-    rgba(8, 12, 23, 0.92);
-  box-shadow: var(--shadow);
-}
-
-.fnb-mark {
-  display: grid;
-  place-items: center;
-  width: 76px;
-  height: 76px;
-  transform: rotate(45deg);
-  border: 2px solid #41d4ca;
-  border-radius: 20px;
-  background: linear-gradient(145deg, #0f999d, #08636e);
-  box-shadow: 0 14px 40px rgba(25, 180, 180, 0.22);
-}
-
-.fnb-mark span {
-  transform: rotate(-45deg);
-  color: #fff;
-  font-size: 1.05rem;
-  font-weight: 900;
-  letter-spacing: 0.04em;
-}
-
-.fnb-kicker {
-  margin-bottom: 7px;
-  color: #61ddd5;
-  font-size: 0.68rem;
-  font-weight: 850;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-}
-
-.payment-card h3 {
-  margin-bottom: 9px;
-  font-size: 1.75rem;
-}
-
-.payment-card-head {
-  padding-bottom: 18px;
-  border-bottom: 1px solid rgba(192, 156, 255, 0.16);
-}
-
-.payment-card-head > p:last-child,
-.payment-provider-note {
-  margin-bottom: 0;
-  color: var(--muted);
-}
-
-.payment-flow {
-  display: grid;
-  gap: 0;
-  margin: 34px 0 0;
-  padding: 0;
-  list-style: none;
-  counter-reset: payment-step;
-}
-
-.payment-flow li {
-  position: relative;
-  display: grid;
-  gap: 3px;
-  min-height: 84px;
-  padding: 0 0 24px 58px;
-  counter-increment: payment-step;
-}
-
-.payment-flow li:not(:last-child)::after {
-  content: "";
-  position: absolute;
-  top: 36px;
-  bottom: 0;
-  left: 18px;
-  width: 1px;
-  background: linear-gradient(var(--violet-light), rgba(192, 156, 255, 0.18));
-}
-
-.payment-flow li::before {
-  content: counter(payment-step);
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: grid;
-  width: 36px;
-  height: 36px;
-  place-items: center;
-  border: 1px solid var(--line-strong);
-  border-radius: 50%;
-  background: rgba(173, 85, 255, 0.12);
-  color: #fff;
-  font-size: 0.78rem;
-  font-weight: 850;
-}
-
-.payment-flow span {
-  color: var(--muted);
-  font-size: 0.9rem;
-}
-
-.payment-safety-note {
-  padding: 16px 18px;
-  border: 1px solid rgba(93, 226, 164, 0.3);
-  border-radius: 16px;
-  background: rgba(93, 226, 164, 0.06);
-  color: #d9f6e8 !important;
-  font-size: 0.86rem !important;
-}
-
-.payment-fields {
-  display: grid;
-  gap: 14px;
-}
-
-.payment-fields.two-column { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-
-.payment-fields label {
-  display: grid;
-  gap: 7px;
-  color: #e9e4ee;
-  font-size: 0.72rem;
-  font-weight: 780;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-}
-
-.payment-fields input,
-.payment-fields select,
-.payment-fields textarea {
-  width: 100%;
-  min-height: 48px;
-  padding: 11px 13px;
-  border: 1px solid var(--line);
-  border-radius: 12px;
-  background: rgba(3, 5, 11, 0.72);
-  color: var(--text);
-  font-size: 0.92rem;
-  letter-spacing: normal;
-  text-transform: none;
-}
-
-.payment-fields input:focus,
-.payment-fields select:focus,
-.payment-fields textarea:focus {
-  border-color: var(--violet-light);
-  outline: 0;
-  box-shadow: 0 0 0 3px rgba(173, 85, 255, 0.12);
-}
-
-.payment-fields textarea {
-  min-height: 128px;
-  resize: vertical;
-  font: inherit;
-}
-
-.payment-total {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
-  padding: 15px 17px;
-  border: 1px solid var(--line);
-  border-radius: 14px;
-  background: rgba(173, 85, 255, 0.07);
-}
-
-.payment-total span { color: var(--muted); font-size: 0.82rem; }
-.payment-total strong { color: var(--violet-light); font-size: 1.1rem; }
-
-.payment-consent {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 10px;
-  align-items: start;
-  color: var(--muted);
-  font-size: 0.78rem;
-  cursor: pointer;
-}
-
-.payment-consent input { margin-top: 4px; accent-color: var(--violet); }
-.payment-provider-note { margin-top: -6px; font-size: 0.74rem; text-align: center; }
-.payment-honeypot { position: absolute !important; left: -10000px !important; width: 1px !important; height: 1px !important; opacity: 0 !important; }
-.payment-actions { display: grid; grid-template-columns: 1fr; gap: 10px; }
-.payment-actions .button:disabled { opacity: 0.42; cursor: not-allowed; }
-
 .quote-layout,
 .contact-layout {
   display: grid;
@@ -1163,8 +924,6 @@ h3 {
 .contact-services h3 { margin-bottom: 14px; }
 .contact-services ul { display: grid; grid-template-columns: 1fr 1fr; gap: 7px 22px; margin: 0; padding: 0; list-style: none; }
 .contact-services li { color: var(--muted); font-size: 0.88rem; }
-.contact-lines { display: flex; flex-wrap: wrap; gap: 12px 24px; }
-.contact-lines a { color: #eadcf8; font-weight: 720; text-decoration-color: var(--violet); text-underline-offset: 4px; }
 
 .contact-form { display: grid; gap: 18px; padding: 30px; }
 .contact-form label, .service-choices legend { color: #e9e4ee; font-size: 0.8rem; font-weight: 780; letter-spacing: 0.05em; text-transform: uppercase; }
@@ -1187,9 +946,6 @@ h3 {
 .choice-grid label { display: flex; align-items: center; gap: 9px; padding: 10px 11px; border: 1px solid rgba(192, 156, 255, 0.16); border-radius: 12px; background: rgba(255, 255, 255, 0.02); font-size: 0.7rem; cursor: pointer; }
 .choice-grid input { width: auto; margin: 0; accent-color: var(--violet); }
 .form-honeypot { position: absolute !important; left: -10000px !important; width: 1px !important; height: 1px !important; opacity: 0 !important; }
-.form-status { min-height: 24px; margin: 0; color: var(--muted); font-weight: 720; }
-.form-status.is-success { color: var(--mint); }
-.form-status.is-error { color: var(--danger); }
 .email-note { margin: 0; text-align: center; }
 
 .site-footer {
@@ -1203,7 +959,7 @@ h3 {
 .footer-inner p { color: var(--muted); }
 .company-details strong { color: #e9e2ef; letter-spacing: 0.08em; }
 .company-details span, .footer-note { font-size: 0.8rem; }
-.company-details a, .footer-legal a, .payment-consent a { color: #eadcf8; text-underline-offset: 3px; }
+.company-details a, .footer-legal a { color: #eadcf8; text-underline-offset: 3px; }
 .footer-legal { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px 20px; margin: 8px 0 4px; font-size: 0.86rem; }
 
 .legal-page { min-height: 100vh; background: #05070d; color: var(--text); }
@@ -1313,8 +1069,6 @@ h3 {
   #service-web { grid-column: span 2; }
   #service-video { grid-column: span 2; }
   .quote-layout, .contact-layout { grid-template-columns: 1fr; }
-  .banking-layout { grid-template-columns: 1fr; }
-  .payment-card { max-width: 680px; }
   .quote-intro, .contact-layout > div { max-width: 800px; }
 }
 
@@ -1381,9 +1135,6 @@ h3 {
   .builder-options { grid-template-columns: 1fr; padding: 10px 20px 22px; }
   .builder-head { padding: 26px 20px 18px; }
   .builder-summary { align-items: stretch; flex-direction: column; padding: 16px 20px; }
-  .payment-fields.two-column { grid-template-columns: 1fr; }
-  .payment-actions { grid-template-columns: 1fr; }
-  .payment-card { padding: 22px; }
   .contact-form { padding: 22px; }
   .service-detail-card { grid-template-columns: 1fr; }
   .audio-player { left: 14px; bottom: 14px; width: min(280px, calc(100vw - 90px)); min-width: 0; }
