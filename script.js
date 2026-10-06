@@ -355,6 +355,69 @@ projectEnquiryButton?.addEventListener("click", async () => {
   }
 });
 
+const competitionForm = document.querySelector("#competition-form");
+const competitionSubmit = document.querySelector("#competition-submit");
+const competitionStatus = document.querySelector("#competition-status");
+const competitionAnswers = { q1: "R3,500", q2: "3", q3: "90 × 50 mm", q4: "50%", q5: "Durban" };
+
+const setCompetitionStatus = (message, state) => {
+  if (!competitionStatus) return;
+  competitionStatus.classList.remove("is-success", "is-error");
+  if (state) competitionStatus.classList.add(state);
+  competitionStatus.textContent = message;
+};
+
+const competitionHasClosed = () => {
+  const closes = Date.parse(competitionForm?.dataset.closes || "");
+  return Number.isFinite(closes) && Date.now() > closes;
+};
+
+if (competitionForm && competitionHasClosed()) {
+  competitionForm.querySelectorAll("input, button").forEach((field) => { field.disabled = true; });
+  setCompetitionStatus("This competition has closed. Thank you to everyone who entered.");
+}
+
+competitionForm?.addEventListener("submit", async (event) => {
+  event.preventDefault();
+  if (competitionHasClosed()) return;
+
+  const unanswered = Object.keys(competitionAnswers).find((name) => !competitionForm.querySelector(`input[name="${name}"]:checked`));
+  if (unanswered) {
+    setCompetitionStatus(`Please answer question ${unanswered.slice(1)}.`, "is-error");
+    competitionForm.querySelector(`input[name="${unanswered}"]`)?.focus();
+    return;
+  }
+  setCompetitionStatus("");
+  if (!competitionForm.reportValidity()) return;
+
+  const data = new FormData(competitionForm);
+  if (data.get("company_website")) return;
+  data.delete("company_website");
+  data.delete("rules_accepted");
+  const score = Object.entries(competitionAnswers).filter(([name, answer]) => data.get(name) === answer).length;
+  data.set("score", `${score} / ${Object.keys(competitionAnswers).length}`);
+  data.set("in_draw", score === Object.keys(competitionAnswers).length ? "Yes" : "No");
+
+  setCompetitionStatus("Sending your entry…");
+  competitionSubmit.disabled = true;
+
+  try {
+    const response = await fetch("https://formsubmit.co/ajax/hello@titanmark.co.za", {
+      method: "POST",
+      headers: { Accept: "application/json" },
+      body: data,
+    });
+    if (!response.ok) throw new Error("Unable to send competition entry");
+
+    competitionForm.reset();
+    setCompetitionStatus("Thank you — your entry is in. The winner will be contacted after the draw on 1 December 2026.", "is-success");
+  } catch {
+    setCompetitionStatus("Your entry could not be sent. Please try again, or email your answers to hello@titanmark.co.za.", "is-error");
+  } finally {
+    competitionSubmit.disabled = false;
+  }
+});
+
 const loadChilledTrack = () => {
   if (!ambientAudio) return;
   const track = chilledTracks[currentTrackIndex];

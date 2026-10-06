@@ -816,14 +816,16 @@ h3 {
     linear-gradient(180deg, #04050a, #080813);
 }
 
-.banking-layout {
+.banking-layout,
+.competition-layout {
   display: grid;
   grid-template-columns: minmax(0, 0.92fr) minmax(420px, 0.78fr);
   gap: clamp(34px, 6vw, 80px);
   align-items: start;
 }
 
-.banking-copy > p:not(.eyebrow) {
+.banking-copy > p:not(.eyebrow),
+.competition-copy > p:not(.eyebrow) {
   max-width: 680px;
   color: var(--muted);
   font-size: 1.08rem;
@@ -1048,6 +1050,109 @@ h3 {
 .payment-honeypot { position: absolute !important; left: -10000px !important; width: 1px !important; height: 1px !important; opacity: 0 !important; }
 .payment-actions { display: grid; grid-template-columns: 1fr; gap: 10px; }
 .payment-actions .button:disabled { opacity: 0.42; cursor: not-allowed; }
+
+.competition-rules {
+  margin-top: 26px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: rgba(173, 85, 255, 0.05);
+}
+
+.competition-rules summary {
+  padding: 14px 18px;
+  color: #e9e4ee;
+  font-size: 0.78rem;
+  font-weight: 780;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.competition-rules ol {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding: 0 22px 18px 38px;
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+
+.competition-rules a { color: var(--violet-light); }
+
+.quiz-question {
+  display: grid;
+  gap: 12px;
+  min-width: 0;
+  margin: 0;
+  padding: 0 0 18px;
+  border: 0;
+  border-bottom: 1px solid rgba(192, 156, 255, 0.14);
+}
+
+.quiz-question legend {
+  display: flex;
+  gap: 12px;
+  align-items: baseline;
+  margin-bottom: 12px;
+  padding: 0;
+  color: var(--text);
+  font-weight: 700;
+}
+
+.quiz-question legend span {
+  flex: 0 0 auto;
+  display: grid;
+  place-items: center;
+  width: 26px;
+  height: 26px;
+  border: 1px solid var(--line-strong);
+  border-radius: 50%;
+  color: var(--violet-light);
+  font-size: 0.78rem;
+}
+
+.quiz-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.quiz-options label { position: relative; cursor: pointer; }
+
+.quiz-options input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.quiz-options span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 42px;
+  padding: 9px 16px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(3, 5, 11, 0.72);
+  color: #ded7e6;
+  font-size: 0.88rem;
+  font-weight: 650;
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+
+.quiz-options label:hover span { border-color: var(--line-strong); }
+
+.quiz-options input:checked + span {
+  border-color: var(--violet-light);
+  background: rgba(173, 85, 255, 0.22);
+  color: var(--text);
+}
+
+.quiz-options input:focus-visible + span {
+  outline: 2px solid var(--violet-light);
+  outline-offset: 2px;
+}
+
+.quiz-options input:disabled + span { opacity: 0.5; cursor: not-allowed; }
 
 .quote-layout,
 .contact-layout {
@@ -1313,8 +1418,8 @@ h3 {
   #service-web { grid-column: span 2; }
   #service-video { grid-column: span 2; }
   .quote-layout, .contact-layout { grid-template-columns: 1fr; }
-  .banking-layout { grid-template-columns: 1fr; }
-  .payment-card { max-width: 680px; }
+  .banking-layout, .competition-layout { grid-template-columns: 1fr; }
+  .payment-card, .competition-copy { max-width: 680px; }
   .quote-intro, .contact-layout > div { max-width: 800px; }
 }
 

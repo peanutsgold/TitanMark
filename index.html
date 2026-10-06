@@ -11,7 +11,7 @@
     >
     <link rel="icon" type="image/png" href="assets/favicon.png">
     <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
-    <link rel="stylesheet" href="styles.css?v=20260918-1">
+    <link rel="stylesheet" href="styles.css?v=20261006-1">
   </head>
   <body>
     <header class="site-header">
@@ -29,6 +29,7 @@
         <a href="#price-guide">Prices</a>
         <a href="#payments">Start a project</a>
         <a href="#portfolio">Portfolio</a>
+        <a href="#competition">Competition</a>
         <a href="#testimonials">Testimonials</a>
       </nav>
     </header>
@@ -726,6 +727,124 @@
         </div>
       </section>
 
+      <section class="section competition-section" id="competition" aria-labelledby="competition-title">
+        <div class="section-inner competition-layout">
+          <div class="competition-copy">
+            <p class="eyebrow">Titanmark quiz competition</p>
+            <h2 id="competition-title">Answer 5 questions. <span>Win a free Starter Logo.</span></h2>
+            <p>Every answer is somewhere on this website. Get all five right and you go into the draw to win a Starter Logo worth R850 — one logo concept plus web-ready files, designed by Titanmark.</p>
+            <div class="banking-assurances" aria-label="Competition highlights">
+              <span>Free to enter</span>
+              <span>Prize worth R850</span>
+              <span>Closes 30 November 2026</span>
+            </div>
+            <ol class="payment-flow" aria-label="How the competition works">
+              <li><strong>Answer the quiz</strong><span>Five quick questions — scroll the site if you need a hint.</span></li>
+              <li><strong>Add your details</strong><span>So we can contact you if you win.</span></li>
+              <li><strong>Winner drawn 1 December 2026</strong><span>Picked at random from all fully correct entries and contacted by email.</span></li>
+            </ol>
+            <details class="competition-rules">
+              <summary>Competition rules</summary>
+              <ol>
+                <li>The promoter is TITANMARK (Pty) Ltd, registration number 2026/551970/07.</li>
+                <li>Entry is free and open to South African residents aged 18 or older. Titanmark staff and their immediate families may not enter.</li>
+                <li>One entry per person. Duplicate entries using the same email address or mobile number will be disqualified.</li>
+                <li>The competition closes at 23:59 on 30 November 2026. Late entries will not be accepted.</li>
+                <li>The winner will be drawn at random on 1 December 2026 from all entries with every answer correct, and contacted by email or phone. If the winner cannot be reached within 14 days, a new winner will be drawn.</li>
+                <li>The prize is one Starter Logo (1 concept, 1 refinement round, transparent PNG, JPG and favicon), valued at R850. It cannot be exchanged for cash or transferred, and must be claimed by 31 March 2027.</li>
+                <li>Entry details are used only to run this competition and contact the winner, and are handled according to our <a href="privacy.html" target="_blank" rel="noopener">privacy policy</a>.</li>
+                <li>Titanmark's decision is final. Questions? Email <a href="mailto:hello@titanmark.co.za">hello@titanmark.co.za</a>.</li>
+              </ol>
+            </details>
+          </div>
+
+          <form class="payment-card competition-card" id="competition-form" data-closes="2026-11-30T23:59:59+02:00" novalidate>
+            <input type="hidden" name="_subject" value="New Titanmark competition entry">
+            <input type="hidden" name="_template" value="table">
+            <div class="payment-card-head">
+              <p class="fnb-kicker">Quiz entry</p>
+              <h3>Test your Titanmark knowledge</h3>
+              <p>Choose one answer for each question.</p>
+            </div>
+
+            <fieldset class="quiz-question">
+              <legend><span>1</span>How much does a 1-page website from Titanmark cost?</legend>
+              <div class="quiz-options">
+                <label><input type="radio" name="q1" value="R1,500" required><span>R1,500</span></label>
+                <label><input type="radio" name="q1" value="R3,500"><span>R3,500</span></label>
+                <label><input type="radio" name="q1" value="R6,000"><span>R6,000</span></label>
+              </div>
+            </fieldset>
+
+            <fieldset class="quiz-question">
+              <legend><span>2</span>How many logo concepts come with the Professional Logo?</legend>
+              <div class="quiz-options">
+                <label><input type="radio" name="q2" value="1" required><span>1</span></label>
+                <label><input type="radio" name="q2" value="3"><span>3</span></label>
+                <label><input type="radio" name="q2" value="5"><span>5</span></label>
+              </div>
+            </fieldset>
+
+            <fieldset class="quiz-question">
+              <legend><span>3</span>What size is a Titanmark business card design?</legend>
+              <div class="quiz-options">
+                <label><input type="radio" name="q3" value="90 × 50 mm" required><span>90 × 50 mm</span></label>
+                <label><input type="radio" name="q3" value="A6"><span>A6</span></label>
+                <label><input type="radio" name="q3" value="100 × 70 mm"><span>100 × 70 mm</span></label>
+              </div>
+            </fieldset>
+
+            <fieldset class="quiz-question">
+              <legend><span>4</span>What deposit does Titanmark take before a project starts?</legend>
+              <div class="quiz-options">
+                <label><input type="radio" name="q4" value="25%" required><span>25%</span></label>
+                <label><input type="radio" name="q4" value="50%"><span>50%</span></label>
+                <label><input type="radio" name="q4" value="100%"><span>100%</span></label>
+              </div>
+            </fieldset>
+
+            <fieldset class="quiz-question">
+              <legend><span>5</span>In which city is Titanmark based?</legend>
+              <div class="quiz-options">
+                <label><input type="radio" name="q5" value="Cape Town" required><span>Cape Town</span></label>
+                <label><input type="radio" name="q5" value="Johannesburg"><span>Johannesburg</span></label>
+                <label><input type="radio" name="q5" value="Durban"><span>Durban</span></label>
+              </div>
+            </fieldset>
+
+            <div class="payment-fields two-column">
+              <label>
+                First name
+                <input type="text" name="name_first" autocomplete="given-name" maxlength="100" required>
+              </label>
+              <label>
+                Last name
+                <input type="text" name="name_last" autocomplete="family-name" maxlength="100" required>
+              </label>
+            </div>
+            <div class="payment-fields">
+              <label>
+                Email address
+                <input type="email" name="email_address" autocomplete="email" maxlength="100" required>
+              </label>
+              <label>
+                Mobile number
+                <input type="tel" name="cell_number" autocomplete="tel" inputmode="tel" maxlength="20" placeholder="e.g. 072 123 4567" required>
+              </label>
+            </div>
+            <label class="payment-consent">
+              <input type="checkbox" name="rules_accepted" value="1" required>
+              <span>I am 18 or older, live in South Africa, and accept the competition rules.</span>
+            </label>
+            <input class="payment-honeypot" type="text" name="company_website" tabindex="-1" autocomplete="off" aria-hidden="true">
+            <div class="payment-actions">
+              <button class="button primary full" id="competition-submit" type="submit">Enter the competition</button>
+            </div>
+            <p class="form-status" id="competition-status" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+
       <section class="section" id="testimonials" aria-labelledby="testimonials-title">
         <div class="section-inner">
           <div class="section-heading">
@@ -855,6 +974,6 @@
       rel="noopener"
       aria-label="Contact Titanmark on WhatsApp"
     >WA</a>
-    <script src="script.js?v=20260918-1"></script>
+    <script src="script.js?v=20261006-1"></script>
   </body>
 </html>
