@@ -26,6 +26,24 @@ const costCards = document.querySelectorAll(".cost-card");
 const paymentPackage = document.querySelector("#payment-package");
 const paymentDeposit = document.querySelector("#payment-deposit");
 const whatsappNumber = ["27", "72", "699", "9872"].join("");
+
+// Titanmark's social pages. Paste each full link between the quotes, e.g.
+// facebook: "https://www.facebook.com/titanmark"
+// A button only appears on the site once its link is filled in.
+const SOCIAL_LINKS = {
+  facebook: "",
+  linkedin: "",
+};
+
+document.querySelectorAll("[data-social]").forEach((link) => {
+  const url = SOCIAL_LINKS[link.dataset.social];
+  if (!url) return;
+  link.href = url;
+  link.hidden = false;
+});
+document.querySelectorAll(".social-follow").forEach((block) => {
+  block.hidden = !block.querySelector("[data-social]:not([hidden])");
+});
 const chilledTracks = [
   { title: "Titanmark Chill", src: "assets/music/titanmark-chill.m4a" },
   { title: "Serene View", src: "assets/music/mixkit-serene-view.mp3" },
