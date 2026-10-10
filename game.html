@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#05070d">
+    <title>Eye for Colour game | Titanmark</title>
+    <meta name="description" content="How good is your eye for colour? Mix five colours by eye and see how close you get — a mini game from Titanmark.">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Titanmark">
+    <meta property="og:url" content="https://titanmark.co.za/game.html">
+    <meta property="og:title" content="Eye for Colour — a Titanmark mini game">
+    <meta property="og:description" content="Mix five colours by eye and see how close you get. Can you beat 45 out of 50?">
+    <meta property="og:image" content="https://titanmark.co.za/assets/favicon.png">
+    <meta property="og:image:alt" content="Titanmark logo">
+    <meta name="twitter:card" content="summary">
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+    <link rel="stylesheet" href="styles.css?v=20261009-2">
+  </head>
+  <body class="game-page">
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Titanmark home">
+        <img src="assets/titanmark-logo-dark.png" alt="Titanmark logo">
+      </a>
+      <a class="button secondary game-back" href="index.html">← Back to Titanmark</a>
+    </header>
+
+    <main class="game-shell">
+      <div class="game-intro">
+        <p class="eyebrow">Titanmark mini game</p>
+        <h1>Eye for <span>colour.</span></h1>
+        <p>Designers match colours by eye every day. Use the three sliders to mix the target colour as closely as you can. Five rounds, up to 10 points each.</p>
+      </div>
+
+      <section class="game-card" aria-label="Eye for Colour game">
+        <div class="game-stats" aria-live="polite">
+          <div><span>Round</span><strong id="game-round">1 / 5</strong></div>
+          <div><span>Score</span><strong id="game-score">0</strong></div>
+          <div><span>Best</span><strong id="game-best">—</strong></div>
+        </div>
+
+        <div id="game-play">
+          <div class="game-swatches">
+            <figure>
+              <div class="game-swatch" id="swatch-target" role="img" aria-label="Target colour"></div>
+              <figcaption>Target</figcaption>
+            </figure>
+            <figure>
+              <div class="game-swatch" id="swatch-mix" role="img" aria-label="Your colour mix"></div>
+              <figcaption>Your mix</figcaption>
+            </figure>
+          </div>
+
+          <div class="game-sliders">
+            <label>
+              <span>Hue <output id="out-h"></output></span>
+              <input type="range" id="slider-h" min="0" max="359" step="1">
+            </label>
+            <label>
+              <span>Saturation <output id="out-s"></output></span>
+              <input type="range" id="slider-s" min="0" max="100" step="1">
+            </label>
+            <label>
+              <span>Lightness <output id="out-l"></output></span>
+              <input type="range" id="slider-l" min="0" max="100" step="1">
+            </label>
+          </div>
+
+          <p class="game-result" id="game-result" role="status" aria-live="polite"></p>
+          <button class="button primary full" id="game-action" type="button">Lock it in</button>
+        </div>
+
+        <div class="game-end" id="game-end" hidden>
+          <p class="eyebrow">Final score</p>
+          <p class="game-final"><strong id="game-final-score">0</strong><span>/ 50</span></p>
+          <h2 id="game-rating">Designer's eye</h2>
+          <p id="game-end-note">Like our eye for detail? Let Titanmark bring it to your brand.</p>
+          <div class="game-end-actions">
+            <button class="button secondary" id="game-restart" type="button">Play again</button>
+            <a class="button primary" href="index.html#payments">Start your project</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="game.js?v=20261009-1"></script>
+  </body>
+</html>
